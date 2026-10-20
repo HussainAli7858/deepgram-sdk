@@ -1,0 +1,293 @@
+# Entity: project_request
+
+main: kit: entity: project_request: {
+
+  alias: field: {}
+
+  fields: {
+    api_key_id: {
+      h: "Api Key Id"
+      n: "api_key_id"
+      r: false
+      sh: "The unique identifier of the API key"
+      t: "`$STRING`"
+    }
+    callback: {
+      h: "Callback"
+      n: "callback"
+      r: false
+      sh: "The callback URL for the request"
+      t: "`$STRING`"
+    }
+    code: {
+      fo: "double"
+      h: "Code"
+      n: "code"
+      r: false
+      sh: "The response code of the request"
+      t: "`$NUMBER`"
+    }
+    created: {
+      fo: "date-time"
+      h: "Created"
+      n: "created"
+      r: false
+      sh: "The date and time the request was created"
+      t: "`$STRING`"
+    }
+    deployment: {
+      h: "Deployment"
+      n: "deployment"
+      r: false
+      sh: "The deployment type"
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    path: {
+      h: "Path"
+      n: "path"
+      r: false
+      sh: "The API path of the request"
+      t: "`$STRING`"
+    }
+    project_uuid: {
+      h: "Project Uuid"
+      n: "project_uuid"
+      r: false
+      sh: "The unique identifier of the project"
+      t: "`$STRING`"
+    }
+    request_id: {
+      h: "Request Id"
+      n: "request_id"
+      r: false
+      sh: "The unique identifier of the request"
+      t: "`$STRING`"
+    }
+    response: {
+      h: "Response"
+      n: "response"
+      r: false
+      sh: "The response of the request"
+      t: "`$OBJECT`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "project_request"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{project_id}/requests"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "project_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "accessor"
+                or: "accessor"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "deployment"
+                or: "deployment"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "end"
+                or: "end"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "endpoint"
+                or: "endpoint"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: 10
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$NUMBER`"
+              }
+              {
+                k: "query"
+                n: "method"
+                or: "method"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "page"
+                or: "page"
+                r: false
+                t: "`$NUMBER`"
+              }
+              {
+                k: "query"
+                n: "request_id"
+                or: "request_id"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "start"
+                or: "start"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "status"
+                or: "status"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{project_id}/requests"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              project_id: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "requests"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.requests`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{project_id}/requests/{request_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "request_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "project_id"
+                or: "project_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{project_id}/requests/{request_id}"
+          q: {
+            exist: [
+              "id"
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              request_id: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "requests"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.request`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

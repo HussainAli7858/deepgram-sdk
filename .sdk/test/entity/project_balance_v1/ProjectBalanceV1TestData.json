@@ -1,0 +1,47 @@
+{
+  "existing": {
+    "project_balance_v1": {
+      "PROJECT_BALANCE_V100": {
+        "amount": 40,
+        "balance_id": "BALANCE01",
+        "purchase_order_id": "PURCHASE_ORDER01",
+        "units": "s2b",
+        "project_id": "PROJECT01",
+        "id": "PROJECT_BALANCE_V100"
+      },
+      "PROJECT_BALANCE_V101": {
+        "amount": 80,
+        "balance_id": "BALANCE01",
+        "purchase_order_id": "PURCHASE_ORDER01",
+        "units": "s53",
+        "project_id": "PROJECT01",
+        "id": "PROJECT_BALANCE_V101"
+      },
+      "PROJECT_BALANCE_V102": {
+        "amount": 120,
+        "balance_id": "BALANCE01",
+        "purchase_order_id": "PURCHASE_ORDER01",
+        "units": "s7b",
+        "project_id": "PROJECT01",
+        "id": "PROJECT_BALANCE_V102"
+      }
+    }
+  },
+  "new": {
+    "project_balance_v1": {
+      "project_balance_v1_ref01": {
+        "amount": 160,
+        "balance_id": "BALANCE01",
+        "purchase_order_id": "PURCHASE_ORDER01",
+        "units": "sa3"
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{project_id}/balances/{balance_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+# BasicListProjectKeysV1ResponseApiKeysItemFlow
+
+main: kit: flow: BasicListProjectKeysV1ResponseApiKeysItemFlow:
+{
+  entity: "list_project_keys_v1_response_api_keys_item",
+  kind: "basic",
+  name: "BasicListProjectKeysV1ResponseApiKeysItemFlow",
+  step: [
+    {
+      m: {
+        project_id: "project01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "list_project_keys_v1_response_api_keys_item_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicListProjectKeysV1ResponseApiKeysItemFlow"
+}

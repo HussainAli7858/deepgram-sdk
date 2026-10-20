@@ -1,0 +1,26 @@
+# BasicListProjectMembersV1ResponseMembersItemFlow
+
+main: kit: flow: BasicListProjectMembersV1ResponseMembersItemFlow:
+{
+  entity: "list_project_members_v1_response_members_item",
+  kind: "basic",
+  name: "BasicListProjectMembersV1ResponseMembersItemFlow",
+  step: [
+    {
+      m: {
+        project_id: "project01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "list_project_members_v1_response_members_item_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicListProjectMembersV1ResponseMembersItemFlow"
+}

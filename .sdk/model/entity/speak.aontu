@@ -1,0 +1,275 @@
+# Entity: speak
+
+main: kit: entity: speak: {
+
+  alias: field: {}
+
+  fields: {
+    request_id: {
+      fo: "uuid"
+      h: "Request Id"
+      n: "request_id"
+      r: true
+      sh: "Unique identifier for tracking the asynchronous request"
+      t: "`$STRING`"
+    }
+    text: {
+      h: "Text"
+      n: "text"
+      r: true
+      sh: "The text content to be converted to speech."
+      t: "`$STRING`"
+    }
+  }
+
+  name: "speak"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          bf: [
+            "text"
+          ]
+          co: {
+            id: "POST /v2/speak"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: 48000
+                k: "query"
+                n: "bit_rate"
+                or: "bit_rate"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "callback"
+                or: "callback"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "POST"
+                k: "query"
+                n: "callback_method"
+                or: "callback_method"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "wav"
+                k: "query"
+                n: "container"
+                or: "container"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                ex: "mp3"
+                k: "query"
+                n: "encoding"
+                or: "encoding"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                ex: 0
+                k: "query"
+                n: "expressivity"
+                or: "expressivity"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: false
+                k: "query"
+                n: "mip_opt_out"
+                or: "mip_opt_out"
+                r: false
+                t: "`$BOOLEAN`"
+              }
+              {
+                k: "query"
+                n: "model"
+                or: "model"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "priority"
+                or: "priority"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: 24000
+                k: "query"
+                n: "sample_rate"
+                or: "sample_rate"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                ex: 1
+                k: "query"
+                n: "speed"
+                or: "speed"
+                r: false
+                t: "`$NUMBER`"
+              }
+              {
+                k: "query"
+                n: "tag"
+                or: "tag"
+                r: false
+                t: "`$ANY`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/v2/speak"
+          q: {
+            exist: [
+              "model"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v2"
+            }
+            {
+              lit: "speak"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          bf: [
+            "text"
+          ]
+          co: {
+            id: "POST /v1/speak"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: 48000
+                k: "query"
+                n: "bit_rate"
+                or: "bit_rate"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "callback"
+                or: "callback"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "POST"
+                k: "query"
+                n: "callback_method"
+                or: "callback_method"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "wav"
+                k: "query"
+                n: "container"
+                or: "container"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                ex: "mp3"
+                k: "query"
+                n: "encoding"
+                or: "encoding"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                ex: false
+                k: "query"
+                n: "mip_opt_out"
+                or: "mip_opt_out"
+                r: false
+                t: "`$BOOLEAN`"
+              }
+              {
+                ex: "aura-asteria-en"
+                k: "query"
+                n: "model"
+                or: "model"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: 24000
+                k: "query"
+                n: "sample_rate"
+                or: "sample_rate"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                ex: 1
+                k: "query"
+                n: "speed"
+                or: "speed"
+                r: false
+                t: "`$NUMBER`"
+              }
+              {
+                k: "query"
+                n: "tag"
+                or: "tag"
+                r: false
+                t: "`$ANY`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/v1/speak"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "speak"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

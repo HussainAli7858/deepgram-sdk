@@ -1,0 +1,103 @@
+# Entity: list_project_members_v1_response_members_item
+
+main: kit: entity: list_project_members_v1_response_members_item: {
+
+  alias: field: {}
+
+  fields: {
+    email: {
+      h: "Email"
+      n: "email"
+      r: false
+      t: "`$STRING`"
+    }
+    first_name: {
+      h: "First Name"
+      n: "first_name"
+      r: false
+      t: "`$STRING`"
+    }
+    last_name: {
+      h: "Last Name"
+      n: "last_name"
+      r: false
+      t: "`$STRING`"
+    }
+    member_id: {
+      h: "Member Id"
+      n: "member_id"
+      r: false
+      sh: "The unique identifier of the member"
+      t: "`$STRING`"
+    }
+    scopes: {
+      h: "Scopes"
+      n: "scopes"
+      r: false
+      sh: "The API scopes of the member"
+      t: "`$ARRAY`"
+    }
+  }
+
+  name: "list_project_members_v1_response_members_item"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{project_id}/members"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "project_id"
+                or: "project_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{project_id}/members"
+          q: {
+            exist: [
+              "project_id"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "members"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.members`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

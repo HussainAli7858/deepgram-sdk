@@ -1,0 +1,88 @@
+# Entity: project_key_v1_response_item
+
+main: kit: entity: project_key_v1_response_item: {
+
+  alias: field: {}
+
+  fields: {
+    member: {
+      h: "Member"
+      n: "member"
+      r: false
+      t: "`$OBJECT`"
+    }
+  }
+
+  name: "project_key_v1_response_item"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{project_id}/keys/{key_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "key_id"
+                or: "key_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "project_id"
+                or: "project_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{project_id}/keys/{key_id}"
+          q: {
+            exist: [
+              "key_id"
+              "project_id"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "keys"
+            }
+            {
+              var: "key_id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.item`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

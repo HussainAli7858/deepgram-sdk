@@ -1,0 +1,75 @@
+{
+  "existing": {
+    "agent_variable": {
+      "AGENT_VARIABLE00": {
+        "api_version": 70,
+        "created_at": "s47",
+        "id": "AGENT_VARIABLE00",
+        "key": "s49",
+        "updated_at": "s4a",
+        "value": "s4b",
+        "variable_id": "VARIABLE01",
+        "project_id": "PROJECT01"
+      },
+      "AGENT_VARIABLE01": {
+        "api_version": 140,
+        "created_at": "s8d",
+        "id": "AGENT_VARIABLE01",
+        "key": "s8f",
+        "updated_at": "s90",
+        "value": "s91",
+        "variable_id": "VARIABLE01",
+        "project_id": "PROJECT01"
+      },
+      "AGENT_VARIABLE02": {
+        "api_version": 210,
+        "created_at": "sd3",
+        "id": "AGENT_VARIABLE02",
+        "key": "sd5",
+        "updated_at": "sd6",
+        "value": "sd7",
+        "variable_id": "VARIABLE01",
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "agent_variable": {
+      "agent_variable_ref01": {
+        "api_version": 280,
+        "created_at": "s119",
+        "key": "s11b",
+        "updated_at": "s11c",
+        "value": "s11d",
+        "variable_id": "VARIABLE01"
+      }
+    }
+  },
+  "requests": {
+    "POST /v1/projects/{project_id}/agent-variables": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v1/projects/{project_id}/agent-variables": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v1/projects/{project_id}/agent-variables/{variable_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /v1/projects/{project_id}/agent-variables/{variable_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /v1/projects/{project_id}/agent-variables/{variable_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+# BasicSpeakFlow
+
+main: kit: flow: BasicSpeakFlow:
+{
+  entity: "speak",
+  kind: "basic",
+  name: "BasicSpeakFlow",
+  step: [
+    {
+      i: {
+        ref: "speak_ref01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicSpeakFlow"
+}

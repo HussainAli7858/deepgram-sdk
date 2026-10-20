@@ -1,0 +1,31 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      description: "The REST API."
+      security: {
+        in: "header"
+        name: "Authorization"
+        prefix: "Token"
+        scheme: "ApiKeyAuth"
+        type: "apiKey"
+      }
+      servers: [
+        {
+          description: "Production"
+          url: "https://api.deepgram.com"
+        }
+        {
+          description: "Base"
+          url: "https://agent.deepgram.com"
+        }
+      ]
+      title: "REST API"
+      version: "1.0.0"
+      website: "https://deepgram.com"
+    }
+  }
+}
+

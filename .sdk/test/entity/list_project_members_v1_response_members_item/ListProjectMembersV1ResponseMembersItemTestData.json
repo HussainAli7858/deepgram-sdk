@@ -1,0 +1,48 @@
+{
+  "existing": {
+    "list_project_members_v1_response_members_item": {
+      "LIST_PROJECT_MEMBERS_V1_RESPONSE_MEMBERS_ITEM00": {
+        "email": "s32",
+        "first_name": "s33",
+        "last_name": "s34",
+        "member_id": "MEMBER01",
+        "scopes": [],
+        "project_id": "PROJECT01"
+      },
+      "LIST_PROJECT_MEMBERS_V1_RESPONSE_MEMBERS_ITEM01": {
+        "email": "s64",
+        "first_name": "s65",
+        "last_name": "s66",
+        "member_id": "MEMBER01",
+        "scopes": [],
+        "project_id": "PROJECT01"
+      },
+      "LIST_PROJECT_MEMBERS_V1_RESPONSE_MEMBERS_ITEM02": {
+        "email": "s96",
+        "first_name": "s97",
+        "last_name": "s98",
+        "member_id": "MEMBER01",
+        "scopes": [],
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "list_project_members_v1_response_members_item": {
+      "list_project_members_v1_response_members_item_ref01": {
+        "email": "sc8",
+        "first_name": "sc9",
+        "last_name": "sca",
+        "member_id": "MEMBER01",
+        "scopes": []
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{project_id}/members": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "existing": {
+    "usage": {
+      "USAGE00": {
+        "end": "s1e",
+        "resolution": {},
+        "start": "s20",
+        "project_id": "PROJECT01",
+        "id": "USAGE00"
+      },
+      "USAGE01": {
+        "end": "s3c",
+        "resolution": {},
+        "start": "s3e",
+        "project_id": "PROJECT01",
+        "id": "USAGE01"
+      },
+      "USAGE02": {
+        "end": "s5a",
+        "resolution": {},
+        "start": "s5c",
+        "project_id": "PROJECT01",
+        "id": "USAGE02"
+      }
+    }
+  },
+  "new": {
+    "usage": {
+      "usage_ref01": {
+        "end": "s78",
+        "resolution": {},
+        "start": "s7a"
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{project_id}/usage": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

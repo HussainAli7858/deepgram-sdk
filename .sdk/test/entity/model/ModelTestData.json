@@ -1,0 +1,49 @@
+{
+  "existing": {
+    "model": {
+      "MODEL00": {
+        "id": "MODEL00",
+        "stt": [],
+        "tts": [],
+        "project_id": "PROJECT01"
+      },
+      "MODEL01": {
+        "id": "MODEL01",
+        "stt": [],
+        "tts": [],
+        "project_id": "PROJECT01"
+      },
+      "MODEL02": {
+        "id": "MODEL02",
+        "stt": [],
+        "tts": [],
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "model": {
+      "model_ref01": {
+        "stt": [],
+        "tts": []
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/models": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v1/projects/{project_id}/models/{model_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v1/models/{model_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

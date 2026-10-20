@@ -1,0 +1,60 @@
+{
+  "existing": {
+    "usage_breakdown_v1": {
+      "USAGE_BREAKDOWN_V100": {
+        "agent_hours": "s50",
+        "grouping": {},
+        "hours": "s52",
+        "requests": 83,
+        "tokens_in": 84,
+        "tokens_out": 85,
+        "total_hours": "s56",
+        "tts_characters": 87,
+        "project_id": "PROJECT01"
+      },
+      "USAGE_BREAKDOWN_V101": {
+        "agent_hours": "sa0",
+        "grouping": {},
+        "hours": "sa2",
+        "requests": 163,
+        "tokens_in": 164,
+        "tokens_out": 165,
+        "total_hours": "sa6",
+        "tts_characters": 167,
+        "project_id": "PROJECT01"
+      },
+      "USAGE_BREAKDOWN_V102": {
+        "agent_hours": "sf0",
+        "grouping": {},
+        "hours": "sf2",
+        "requests": 243,
+        "tokens_in": 244,
+        "tokens_out": 245,
+        "total_hours": "sf6",
+        "tts_characters": 247,
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "usage_breakdown_v1": {
+      "usage_breakdown_v1_ref01": {
+        "agent_hours": "s140",
+        "grouping": {},
+        "hours": "s142",
+        "requests": 323,
+        "tokens_in": 324,
+        "tokens_out": 325,
+        "total_hours": "s146",
+        "tts_characters": 327
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{project_id}/usage/breakdown": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "existing": {
+    "list_project_invites_v1_response_invites_item": {
+      "LIST_PROJECT_INVITES_V1_RESPONSE_INVITES_ITEM00": {
+        "email": "s14",
+        "scope": "s15",
+        "project_id": "PROJECT01"
+      },
+      "LIST_PROJECT_INVITES_V1_RESPONSE_INVITES_ITEM01": {
+        "email": "s28",
+        "scope": "s29",
+        "project_id": "PROJECT01"
+      },
+      "LIST_PROJECT_INVITES_V1_RESPONSE_INVITES_ITEM02": {
+        "email": "s3c",
+        "scope": "s3d",
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "list_project_invites_v1_response_invites_item": {
+      "list_project_invites_v1_response_invites_item_ref01": {
+        "email": "s50",
+        "scope": "s51"
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{project_id}/invites": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "existing": {
+    "speak": {
+      "SPEAK00": {
+        "request_id": "REQUEST01",
+        "text": "s15",
+        "id": "SPEAK00"
+      },
+      "SPEAK01": {
+        "request_id": "REQUEST01",
+        "text": "s29",
+        "id": "SPEAK01"
+      },
+      "SPEAK02": {
+        "request_id": "REQUEST01",
+        "text": "s3d",
+        "id": "SPEAK02"
+      }
+    }
+  },
+  "new": {
+    "speak": {
+      "speak_ref01": {
+        "request_id": "REQUEST01",
+        "text": "s51"
+      }
+    }
+  },
+  "requests": {
+    "POST /v2/speak": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /v1/speak": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

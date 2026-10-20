@@ -1,0 +1,343 @@
+# Entity: listen
+
+main: kit: entity: listen: {
+
+  alias: field: {}
+
+  fields: {
+    url: {
+      fo: "uri"
+      h: "Url"
+      n: "url"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  name: "listen"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          bf: [
+            "url"
+          ]
+          co: {
+            id: "POST /v1/listen"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "callback"
+                or: "callback"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "POST"
+                k: "query"
+                n: "callback_method"
+                or: "callback_method"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "custom_intent"
+                or: "custom_intent"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                ex: "extended"
+                k: "query"
+                n: "custom_intent_mode"
+                or: "custom_intent_mode"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "custom_topic"
+                or: "custom_topic"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                ex: "extended"
+                k: "query"
+                n: "custom_topic_mode"
+                or: "custom_topic_mode"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: false
+                k: "query"
+                n: "detect_entity"
+                or: "detect_entities"
+                r: false
+                t: "`$BOOLEAN`"
+              }
+              {
+                k: "query"
+                n: "detect_language"
+                or: "detect_language"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                ex: false
+                k: "query"
+                n: "diarize"
+                or: "diarize"
+                r: false
+                t: "`$BOOLEAN`"
+              }
+              {
+                k: "query"
+                n: "diarize_model"
+                or: "diarize_model"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: false
+                k: "query"
+                n: "dictation"
+                or: "dictation"
+                r: false
+                t: "`$BOOLEAN`"
+              }
+              {
+                k: "query"
+                n: "encoding"
+                or: "encoding"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "extra"
+                or: "extra"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                ex: false
+                k: "query"
+                n: "filler_word"
+                or: "filler_words"
+                r: false
+                t: "`$BOOLEAN`"
+              }
+              {
+                ex: false
+                k: "query"
+                n: "intent"
+                or: "intents"
+                r: false
+                t: "`$BOOLEAN`"
+              }
+              {
+                k: "query"
+                n: "keyterm"
+                or: "keyterm"
+                r: false
+                t: "`$ARRAY`"
+              }
+              {
+                k: "query"
+                n: "keyword"
+                or: "keywords"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                ex: "en"
+                k: "query"
+                n: "language"
+                or: "language"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: false
+                k: "query"
+                n: "measurement"
+                or: "measurements"
+                r: false
+                t: "`$BOOLEAN`"
+              }
+              {
+                ex: false
+                k: "query"
+                n: "mip_opt_out"
+                or: "mip_opt_out"
+                r: false
+                t: "`$BOOLEAN`"
+              }
+              {
+                ex: "base-general"
+                k: "query"
+                n: "model"
+                or: "model"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                ex: false
+                k: "query"
+                n: "multichannel"
+                or: "multichannel"
+                r: false
+                t: "`$BOOLEAN`"
+              }
+              {
+                ex: false
+                k: "query"
+                n: "numeral"
+                or: "numerals"
+                r: false
+                t: "`$BOOLEAN`"
+              }
+              {
+                ex: false
+                k: "query"
+                n: "paragraph"
+                or: "paragraphs"
+                r: false
+                t: "`$BOOLEAN`"
+              }
+              {
+                ex: false
+                k: "query"
+                n: "profanity_filter"
+                or: "profanity_filter"
+                r: false
+                t: "`$BOOLEAN`"
+              }
+              {
+                ex: false
+                k: "query"
+                n: "punctuate"
+                or: "punctuate"
+                r: false
+                t: "`$BOOLEAN`"
+              }
+              {
+                ex: false
+                k: "query"
+                n: "redact"
+                or: "redact"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "replace"
+                or: "replace"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "search"
+                or: "search"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                ex: false
+                k: "query"
+                n: "sentiment"
+                or: "sentiment"
+                r: false
+                t: "`$BOOLEAN`"
+              }
+              {
+                ex: false
+                k: "query"
+                n: "smart_format"
+                or: "smart_format"
+                r: false
+                t: "`$BOOLEAN`"
+              }
+              {
+                k: "query"
+                n: "summarize"
+                or: "summarize"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "tag"
+                or: "tag"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                ex: false
+                k: "query"
+                n: "topic"
+                or: "topics"
+                r: false
+                t: "`$BOOLEAN`"
+              }
+              {
+                ex: 0.8
+                k: "query"
+                n: "utt_split"
+                or: "utt_split"
+                r: false
+                t: "`$NUMBER`"
+              }
+              {
+                ex: false
+                k: "query"
+                n: "utterance"
+                or: "utterances"
+                r: false
+                t: "`$BOOLEAN`"
+              }
+              {
+                ex: "latest"
+                k: "query"
+                n: "version"
+                or: "version"
+                r: false
+                t: "`$ANY`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/v1/listen"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "listen"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

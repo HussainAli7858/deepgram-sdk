@@ -1,0 +1,33 @@
+{
+  "existing": {
+    "project_invite_v1": {
+      "PROJECT_INVITE_V100": {
+        "email": "EMAIL01",
+        "project_id": "PROJECT01",
+        "id": "PROJECT_INVITE_V100"
+      },
+      "PROJECT_INVITE_V101": {
+        "email": "EMAIL01",
+        "project_id": "PROJECT01",
+        "id": "PROJECT_INVITE_V101"
+      },
+      "PROJECT_INVITE_V102": {
+        "email": "EMAIL01",
+        "project_id": "PROJECT01",
+        "id": "PROJECT_INVITE_V102"
+      }
+    }
+  },
+  "new": {
+    "project_invite_v1": {
+      "project_invite_v1_ref01": {}
+    }
+  },
+  "requests": {
+    "DELETE /v1/projects/{project_id}/invites/{email}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

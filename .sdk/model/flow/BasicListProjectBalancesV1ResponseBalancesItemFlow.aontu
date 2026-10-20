@@ -1,0 +1,26 @@
+# BasicListProjectBalancesV1ResponseBalancesItemFlow
+
+main: kit: flow: BasicListProjectBalancesV1ResponseBalancesItemFlow:
+{
+  entity: "list_project_balances_v1_response_balances_item",
+  kind: "basic",
+  name: "BasicListProjectBalancesV1ResponseBalancesItemFlow",
+  step: [
+    {
+      m: {
+        project_id: "project01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "list_project_balances_v1_response_balances_item_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicListProjectBalancesV1ResponseBalancesItemFlow"
+}

@@ -1,0 +1,75 @@
+# Entity: grant
+
+main: kit: entity: grant: {
+
+  alias: field: {}
+
+  fields: {
+    access_token: {
+      h: "Access Token"
+      n: "access_token"
+      r: true
+      sh: "JSON Web Token (JWT)"
+      t: "`$STRING`"
+    }
+    expires_in: {
+      fo: "double"
+      h: "Expires In"
+      n: "expires_in"
+      r: false
+      sh: "Time in seconds until the JWT expires"
+      t: "`$NUMBER`"
+    }
+    ttl_seconds: {
+      fo: "double"
+      h: "Ttl Seconds"
+      n: "ttl_seconds"
+      r: false
+      sh: "Time to live in seconds for the token."
+      t: "`$NUMBER`"
+    }
+  }
+
+  name: "grant"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          bf: [
+            "ttl_seconds"
+          ]
+          co: {
+            id: "POST /v1/auth/grant"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/v1/auth/grant"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "auth"
+            }
+            {
+              lit: "grant"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

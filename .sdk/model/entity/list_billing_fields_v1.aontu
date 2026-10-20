@@ -1,0 +1,118 @@
+# Entity: list_billing_fields_v1
+
+main: kit: entity: list_billing_fields_v1: {
+
+  alias: field: {}
+
+  fields: {
+    accessors: {
+      h: "Accessors"
+      n: "accessors"
+      r: false
+      sh: "List of accessor UUIDs for the time period"
+      t: "`$ARRAY`"
+    }
+    deployments: {
+      h: "Deployments"
+      n: "deployments"
+      r: false
+      sh: "List of deployment types for the time period"
+      t: "`$ARRAY`"
+    }
+    line_items: {
+      h: "Line Items"
+      n: "line_items"
+      r: false
+      sh: "Map of line item names to human-readable descriptions for the time period"
+      t: "`$OBJECT`"
+    }
+    tags: {
+      h: "Tags"
+      n: "tags"
+      r: false
+      sh: "List of tags for the time period"
+      t: "`$ARRAY`"
+    }
+  }
+
+  name: "list_billing_fields_v1"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{project_id}/billing/fields"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "project_id"
+                or: "project_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "end"
+                or: "end"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "start"
+                or: "start"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{project_id}/billing/fields"
+          q: {
+            exist: [
+              "project_id"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "billing"
+            }
+            {
+              lit: "fields"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

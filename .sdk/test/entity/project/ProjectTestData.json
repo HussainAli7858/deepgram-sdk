@@ -1,0 +1,55 @@
+{
+  "existing": {
+    "project": {
+      "PROJECT00": {
+        "id": "PROJECT00",
+        "mip_opt_out": false,
+        "name": "s2a",
+        "project_id": "PROJECT01"
+      },
+      "PROJECT01": {
+        "id": "PROJECT01",
+        "mip_opt_out": false,
+        "name": "s52",
+        "project_id": "PROJECT01"
+      },
+      "PROJECT02": {
+        "id": "PROJECT02",
+        "mip_opt_out": false,
+        "name": "s7a",
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "project": {
+      "project_ref01": {
+        "mip_opt_out": false,
+        "name": "sa2",
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v1/projects/{project_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /v1/projects/{project_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /v1/projects/{project_id}/leave": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

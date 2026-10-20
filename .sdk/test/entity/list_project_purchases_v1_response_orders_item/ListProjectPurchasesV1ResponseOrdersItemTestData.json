@@ -1,0 +1,52 @@
+{
+  "existing": {
+    "list_project_purchases_v1_response_orders_item": {
+      "LIST_PROJECT_PURCHASES_V1_RESPONSE_ORDERS_ITEM00": {
+        "amount": "s3c",
+        "created": "s3d",
+        "expiration": "s3e",
+        "order_id": "ORDER01",
+        "order_type": "s40",
+        "units": "s41",
+        "project_id": "PROJECT01"
+      },
+      "LIST_PROJECT_PURCHASES_V1_RESPONSE_ORDERS_ITEM01": {
+        "amount": "s78",
+        "created": "s79",
+        "expiration": "s7a",
+        "order_id": "ORDER01",
+        "order_type": "s7c",
+        "units": "s7d",
+        "project_id": "PROJECT01"
+      },
+      "LIST_PROJECT_PURCHASES_V1_RESPONSE_ORDERS_ITEM02": {
+        "amount": "sb4",
+        "created": "sb5",
+        "expiration": "sb6",
+        "order_id": "ORDER01",
+        "order_type": "sb8",
+        "units": "sb9",
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "list_project_purchases_v1_response_orders_item": {
+      "list_project_purchases_v1_response_orders_item_ref01": {
+        "amount": "sf0",
+        "created": "sf1",
+        "expiration": "sf2",
+        "order_id": "ORDER01",
+        "order_type": "sf4",
+        "units": "sf5"
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{project_id}/purchases": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+# BasicProjectKeyV1Flow
+
+main: kit: flow: BasicProjectKeyV1Flow:
+{
+  entity: "project_key_v1",
+  kind: "basic",
+  name: "BasicProjectKeyV1Flow",
+  "key$": "BasicProjectKeyV1Flow"
+}

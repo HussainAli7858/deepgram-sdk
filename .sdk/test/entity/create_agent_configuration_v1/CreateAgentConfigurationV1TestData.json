@@ -1,0 +1,47 @@
+{
+  "existing": {
+    "create_agent_configuration_v1": {
+      "CREATE_AGENT_CONFIGURATION_V100": {
+        "agent_id": "AGENT01",
+        "api_version": 41,
+        "config": {},
+        "metadata": {},
+        "project_id": "PROJECT01",
+        "id": "CREATE_AGENT_CONFIGURATION_V100"
+      },
+      "CREATE_AGENT_CONFIGURATION_V101": {
+        "agent_id": "AGENT01",
+        "api_version": 81,
+        "config": {},
+        "metadata": {},
+        "project_id": "PROJECT01",
+        "id": "CREATE_AGENT_CONFIGURATION_V101"
+      },
+      "CREATE_AGENT_CONFIGURATION_V102": {
+        "agent_id": "AGENT01",
+        "api_version": 121,
+        "config": {},
+        "metadata": {},
+        "project_id": "PROJECT01",
+        "id": "CREATE_AGENT_CONFIGURATION_V102"
+      }
+    }
+  },
+  "new": {
+    "create_agent_configuration_v1": {
+      "create_agent_configuration_v1_ref01": {
+        "agent_id": "AGENT01",
+        "api_version": 161,
+        "config": {},
+        "metadata": {}
+      }
+    }
+  },
+  "requests": {
+    "POST /v1/projects/{project_id}/agents": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

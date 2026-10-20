@@ -1,0 +1,100 @@
+# Entity: list_project_balances_v1_response_balances_item
+
+main: kit: entity: list_project_balances_v1_response_balances_item: {
+
+  alias: field: {}
+
+  fields: {
+    amount: {
+      fo: "double"
+      h: "Amount"
+      n: "amount"
+      r: false
+      sh: "The amount of the balance"
+      t: "`$NUMBER`"
+    }
+    balance_id: {
+      h: "Balance Id"
+      n: "balance_id"
+      r: false
+      sh: "The unique identifier of the balance"
+      t: "`$STRING`"
+    }
+    purchase_order_id: {
+      h: "Purchase Order Id"
+      n: "purchase_order_id"
+      r: false
+      sh: "Description or reference of the purchase"
+      t: "`$STRING`"
+    }
+    units: {
+      h: "Units"
+      n: "units"
+      r: false
+      sh: "The units of the balance, such as \"USD\""
+      t: "`$STRING`"
+    }
+  }
+
+  name: "list_project_balances_v1_response_balances_item"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{project_id}/balances"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "project_id"
+                or: "project_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{project_id}/balances"
+          q: {
+            exist: [
+              "project_id"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "balances"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.balances`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

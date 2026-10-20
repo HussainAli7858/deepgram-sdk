@@ -1,0 +1,26 @@
+# BasicUsageFieldsV1Flow
+
+main: kit: flow: BasicUsageFieldsV1Flow:
+{
+  entity: "usage_fields_v1",
+  kind: "basic",
+  name: "BasicUsageFieldsV1Flow",
+  step: [
+    {
+      m: {
+        project_id: "project01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "usage_fields_v1_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicUsageFieldsV1Flow"
+}

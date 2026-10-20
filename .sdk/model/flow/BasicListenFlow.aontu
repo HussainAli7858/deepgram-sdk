@@ -1,0 +1,18 @@
+# BasicListenFlow
+
+main: kit: flow: BasicListenFlow:
+{
+  entity: "listen",
+  kind: "basic",
+  name: "BasicListenFlow",
+  step: [
+    {
+      i: {
+        ref: "listen_ref01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicListenFlow"
+}

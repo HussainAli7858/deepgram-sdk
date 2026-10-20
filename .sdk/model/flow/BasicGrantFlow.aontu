@@ -1,0 +1,18 @@
+# BasicGrantFlow
+
+main: kit: flow: BasicGrantFlow:
+{
+  entity: "grant",
+  kind: "basic",
+  name: "BasicGrantFlow",
+  step: [
+    {
+      i: {
+        ref: "grant_ref01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicGrantFlow"
+}

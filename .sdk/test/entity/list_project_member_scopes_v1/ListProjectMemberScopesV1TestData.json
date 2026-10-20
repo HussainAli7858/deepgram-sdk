@@ -1,0 +1,35 @@
+{
+  "existing": {
+    "list_project_member_scopes_v1": {
+      "LIST_PROJECT_MEMBER_SCOPES_V100": {
+        "scopes": [],
+        "member_id": "MEMBER01",
+        "project_id": "PROJECT01"
+      },
+      "LIST_PROJECT_MEMBER_SCOPES_V101": {
+        "scopes": [],
+        "member_id": "MEMBER01",
+        "project_id": "PROJECT01"
+      },
+      "LIST_PROJECT_MEMBER_SCOPES_V102": {
+        "scopes": [],
+        "member_id": "MEMBER01",
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "list_project_member_scopes_v1": {
+      "list_project_member_scopes_v1_ref01": {
+        "scopes": []
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{project_id}/members/{member_id}/scopes": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

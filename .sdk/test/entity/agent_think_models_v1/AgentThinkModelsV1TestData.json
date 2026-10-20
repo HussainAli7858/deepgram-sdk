@@ -1,0 +1,29 @@
+{
+  "existing": {
+    "agent_think_models_v1": {
+      "AGENT_THINK_MODELS_V100": {
+        "models": []
+      },
+      "AGENT_THINK_MODELS_V101": {
+        "models": []
+      },
+      "AGENT_THINK_MODELS_V102": {
+        "models": []
+      }
+    }
+  },
+  "new": {
+    "agent_think_models_v1": {
+      "agent_think_models_v1_ref01": {
+        "models": []
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/agent/settings/think/models": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

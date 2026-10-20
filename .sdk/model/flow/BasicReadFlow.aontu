@@ -1,0 +1,18 @@
+# BasicReadFlow
+
+main: kit: flow: BasicReadFlow:
+{
+  entity: "read",
+  kind: "basic",
+  name: "BasicReadFlow",
+  step: [
+    {
+      i: {
+        ref: "read_ref01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicReadFlow"
+}

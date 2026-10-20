@@ -1,0 +1,39 @@
+{
+  "existing": {
+    "update_project_v1": {
+      "UPDATE_PROJECT_V100": {
+        "message": "s14",
+        "name": "s15",
+        "project_id": "PROJECT01",
+        "id": "UPDATE_PROJECT_V100"
+      },
+      "UPDATE_PROJECT_V101": {
+        "message": "s28",
+        "name": "s29",
+        "project_id": "PROJECT01",
+        "id": "UPDATE_PROJECT_V101"
+      },
+      "UPDATE_PROJECT_V102": {
+        "message": "s3c",
+        "name": "s3d",
+        "project_id": "PROJECT01",
+        "id": "UPDATE_PROJECT_V102"
+      }
+    }
+  },
+  "new": {
+    "update_project_v1": {
+      "update_project_v1_ref01": {
+        "message": "s50",
+        "name": "s51"
+      }
+    }
+  },
+  "requests": {
+    "PATCH /v1/projects/{project_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

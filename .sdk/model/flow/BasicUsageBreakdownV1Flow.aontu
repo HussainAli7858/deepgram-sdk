@@ -1,0 +1,26 @@
+# BasicUsageBreakdownV1Flow
+
+main: kit: flow: BasicUsageBreakdownV1Flow:
+{
+  entity: "usage_breakdown_v1",
+  kind: "basic",
+  name: "BasicUsageBreakdownV1Flow",
+  step: [
+    {
+      m: {
+        project_id: "project01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "usage_breakdown_v1_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicUsageBreakdownV1Flow"
+}

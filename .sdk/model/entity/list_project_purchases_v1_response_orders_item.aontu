@@ -1,0 +1,120 @@
+# Entity: list_project_purchases_v1_response_orders_item
+
+main: kit: entity: list_project_purchases_v1_response_orders_item: {
+
+  alias: field: {}
+
+  fields: {
+    amount: {
+      h: "Amount"
+      n: "amount"
+      r: false
+      t: "`$STRING`"
+    }
+    created: {
+      fo: "date-time"
+      h: "Created"
+      n: "created"
+      r: false
+      t: "`$STRING`"
+    }
+    expiration: {
+      fo: "date-time"
+      h: "Expiration"
+      n: "expiration"
+      r: false
+      t: "`$STRING`"
+    }
+    order_id: {
+      fo: "uuid"
+      h: "Order Id"
+      n: "order_id"
+      r: false
+      t: "`$STRING`"
+    }
+    order_type: {
+      h: "Order Type"
+      n: "order_type"
+      r: false
+      t: "`$STRING`"
+    }
+    units: {
+      h: "Units"
+      n: "units"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  name: "list_project_purchases_v1_response_orders_item"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{project_id}/purchases"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "project_id"
+                or: "project_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                ex: 10
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$NUMBER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{project_id}/purchases"
+          q: {
+            exist: [
+              "project_id"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "purchases"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.orders`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

@@ -1,0 +1,66 @@
+{
+  "existing": {
+    "agent": {
+      "AGENT00": {
+        "agent_id": "AGENT01",
+        "config": {},
+        "created_at": "s3e",
+        "id": "AGENT00",
+        "metadata": {},
+        "updated_at": "s41",
+        "project_id": "PROJECT01"
+      },
+      "AGENT01": {
+        "agent_id": "AGENT01",
+        "config": {},
+        "created_at": "s7a",
+        "id": "AGENT01",
+        "metadata": {},
+        "updated_at": "s7d",
+        "project_id": "PROJECT01"
+      },
+      "AGENT02": {
+        "agent_id": "AGENT01",
+        "config": {},
+        "created_at": "sb6",
+        "id": "AGENT02",
+        "metadata": {},
+        "updated_at": "sb9",
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "agent": {
+      "agent_ref01": {
+        "agent_id": "AGENT01",
+        "config": {},
+        "created_at": "sf2",
+        "metadata": {},
+        "updated_at": "sf5"
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{project_id}/agents": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v1/projects/{project_id}/agents/{agent_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /v1/projects/{project_id}/agents/{agent_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /v1/projects/{project_id}/agents/{agent_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

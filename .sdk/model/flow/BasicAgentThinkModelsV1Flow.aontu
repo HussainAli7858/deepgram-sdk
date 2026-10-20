@@ -1,0 +1,22 @@
+# BasicAgentThinkModelsV1Flow
+
+main: kit: flow: BasicAgentThinkModelsV1Flow:
+{
+  entity: "agent_think_models_v1",
+  kind: "basic",
+  name: "BasicAgentThinkModelsV1Flow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "agent_think_models_v1_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAgentThinkModelsV1Flow"
+}

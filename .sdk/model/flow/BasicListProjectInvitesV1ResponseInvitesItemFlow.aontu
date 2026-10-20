@@ -1,0 +1,26 @@
+# BasicListProjectInvitesV1ResponseInvitesItemFlow
+
+main: kit: flow: BasicListProjectInvitesV1ResponseInvitesItemFlow:
+{
+  entity: "list_project_invites_v1_response_invites_item",
+  kind: "basic",
+  name: "BasicListProjectInvitesV1ResponseInvitesItemFlow",
+  step: [
+    {
+      m: {
+        project_id: "project01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "list_project_invites_v1_response_invites_item_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicListProjectInvitesV1ResponseInvitesItemFlow"
+}

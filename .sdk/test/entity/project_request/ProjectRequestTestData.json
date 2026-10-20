@@ -1,0 +1,72 @@
+{
+  "existing": {
+    "project_request": {
+      "PROJECT_REQUEST00": {
+        "api_key_id": "API_KEY01",
+        "callback": "s65",
+        "code": 102,
+        "created": "s67",
+        "deployment": "s68",
+        "id": "PROJECT_REQUEST00",
+        "path": "s6a",
+        "project_uuid": "s6b",
+        "request_id": "REQUEST01",
+        "response": {},
+        "project_id": "PROJECT01"
+      },
+      "PROJECT_REQUEST01": {
+        "api_key_id": "API_KEY01",
+        "callback": "sc9",
+        "code": 202,
+        "created": "scb",
+        "deployment": "scc",
+        "id": "PROJECT_REQUEST01",
+        "path": "sce",
+        "project_uuid": "scf",
+        "request_id": "REQUEST01",
+        "response": {},
+        "project_id": "PROJECT01"
+      },
+      "PROJECT_REQUEST02": {
+        "api_key_id": "API_KEY01",
+        "callback": "s12d",
+        "code": 302,
+        "created": "s12f",
+        "deployment": "s130",
+        "id": "PROJECT_REQUEST02",
+        "path": "s132",
+        "project_uuid": "s133",
+        "request_id": "REQUEST01",
+        "response": {},
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "project_request": {
+      "project_request_ref01": {
+        "api_key_id": "API_KEY01",
+        "callback": "s191",
+        "code": 402,
+        "created": "s193",
+        "deployment": "s194",
+        "path": "s196",
+        "project_uuid": "s197",
+        "request_id": "REQUEST01",
+        "response": {}
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{project_id}/requests": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v1/projects/{project_id}/requests/{request_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

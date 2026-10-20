@@ -1,0 +1,26 @@
+# BasicListBillingFieldsV1Flow
+
+main: kit: flow: BasicListBillingFieldsV1Flow:
+{
+  entity: "list_billing_fields_v1",
+  kind: "basic",
+  name: "BasicListBillingFieldsV1Flow",
+  step: [
+    {
+      m: {
+        project_id: "project01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "list_billing_fields_v1_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicListBillingFieldsV1Flow"
+}

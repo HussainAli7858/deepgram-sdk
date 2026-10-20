@@ -1,0 +1,55 @@
+{
+  "existing": {
+    "create_key_v1": {
+      "CREATE_KEY_V100": {
+        "api_key_id": "API_KEY01",
+        "comment": "s3d",
+        "expiration_date": "s3e",
+        "key": "s3f",
+        "scopes": [],
+        "tags": [],
+        "project_id": "PROJECT01",
+        "id": "CREATE_KEY_V100"
+      },
+      "CREATE_KEY_V101": {
+        "api_key_id": "API_KEY01",
+        "comment": "s79",
+        "expiration_date": "s7a",
+        "key": "s7b",
+        "scopes": [],
+        "tags": [],
+        "project_id": "PROJECT01",
+        "id": "CREATE_KEY_V101"
+      },
+      "CREATE_KEY_V102": {
+        "api_key_id": "API_KEY01",
+        "comment": "sb5",
+        "expiration_date": "sb6",
+        "key": "sb7",
+        "scopes": [],
+        "tags": [],
+        "project_id": "PROJECT01",
+        "id": "CREATE_KEY_V102"
+      }
+    }
+  },
+  "new": {
+    "create_key_v1": {
+      "create_key_v1_ref01": {
+        "api_key_id": "API_KEY01",
+        "comment": "sf1",
+        "expiration_date": "sf2",
+        "key": "sf3",
+        "scopes": [],
+        "tags": []
+      }
+    }
+  },
+  "requests": {
+    "POST /v1/projects/{project_id}/keys": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

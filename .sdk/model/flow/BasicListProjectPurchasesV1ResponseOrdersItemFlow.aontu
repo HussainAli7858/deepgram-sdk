@@ -1,0 +1,26 @@
+# BasicListProjectPurchasesV1ResponseOrdersItemFlow
+
+main: kit: flow: BasicListProjectPurchasesV1ResponseOrdersItemFlow:
+{
+  entity: "list_project_purchases_v1_response_orders_item",
+  kind: "basic",
+  name: "BasicListProjectPurchasesV1ResponseOrdersItemFlow",
+  step: [
+    {
+      m: {
+        project_id: "project01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "list_project_purchases_v1_response_orders_item_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicListProjectPurchasesV1ResponseOrdersItemFlow"
+}

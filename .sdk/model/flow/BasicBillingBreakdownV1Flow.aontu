@@ -1,0 +1,26 @@
+# BasicBillingBreakdownV1Flow
+
+main: kit: flow: BasicBillingBreakdownV1Flow:
+{
+  entity: "billing_breakdown_v1",
+  kind: "basic",
+  name: "BasicBillingBreakdownV1Flow",
+  step: [
+    {
+      m: {
+        project_id: "project01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "billing_breakdown_v1_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicBillingBreakdownV1Flow"
+}

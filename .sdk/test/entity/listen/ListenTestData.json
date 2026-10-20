@@ -1,0 +1,32 @@
+{
+  "existing": {
+    "listen": {
+      "LISTEN00": {
+        "url": "sa",
+        "id": "LISTEN00"
+      },
+      "LISTEN01": {
+        "url": "s14",
+        "id": "LISTEN01"
+      },
+      "LISTEN02": {
+        "url": "s1e",
+        "id": "LISTEN02"
+      }
+    }
+  },
+  "new": {
+    "listen": {
+      "listen_ref01": {
+        "url": "s28"
+      }
+    }
+  },
+  "requests": {
+    "POST /v1/listen": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

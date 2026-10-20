@@ -1,0 +1,44 @@
+{
+  "existing": {
+    "usage_fields_v1": {
+      "USAGE_FIELDS_V100": {
+        "language": "s28",
+        "model_id": "MODEL01",
+        "name": "s2a",
+        "version": "s2b",
+        "project_id": "PROJECT01"
+      },
+      "USAGE_FIELDS_V101": {
+        "language": "s50",
+        "model_id": "MODEL01",
+        "name": "s52",
+        "version": "s53",
+        "project_id": "PROJECT01"
+      },
+      "USAGE_FIELDS_V102": {
+        "language": "s78",
+        "model_id": "MODEL01",
+        "name": "s7a",
+        "version": "s7b",
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "usage_fields_v1": {
+      "usage_fields_v1_ref01": {
+        "language": "sa0",
+        "model_id": "MODEL01",
+        "name": "sa2",
+        "version": "sa3"
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{project_id}/usage/fields": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

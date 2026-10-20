@@ -1,0 +1,22 @@
+# BasicCreateAgentConfigurationV1Flow
+
+main: kit: flow: BasicCreateAgentConfigurationV1Flow:
+{
+  entity: "create_agent_configuration_v1",
+  kind: "basic",
+  name: "BasicCreateAgentConfigurationV1Flow",
+  step: [
+    {
+      i: {
+        ref: "create_agent_configuration_v1_ref01"
+      }
+
+      m: {
+        project_id: "project01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicCreateAgentConfigurationV1Flow"
+}

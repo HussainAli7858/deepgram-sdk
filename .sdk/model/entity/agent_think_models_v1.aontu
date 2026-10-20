@@ -1,0 +1,66 @@
+# Entity: agent_think_models_v1
+
+main: kit: entity: agent_think_models_v1: {
+
+  alias: field: {}
+
+  fields: {
+    models: {
+      h: "Models"
+      n: "models"
+      r: true
+      t: "`$ARRAY`"
+      union: {
+        branches: 5
+        count: 1
+        depth: 1
+      }
+    }
+  }
+
+  name: "agent_think_models_v1"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /v1/agent/settings/think/models"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/v1/agent/settings/think/models"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "agent"
+            }
+            {
+              lit: "settings"
+            }
+            {
+              lit: "think"
+            }
+            {
+              lit: "models"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.models`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

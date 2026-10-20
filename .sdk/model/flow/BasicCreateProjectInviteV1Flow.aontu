@@ -1,0 +1,22 @@
+# BasicCreateProjectInviteV1Flow
+
+main: kit: flow: BasicCreateProjectInviteV1Flow:
+{
+  entity: "create_project_invite_v1",
+  kind: "basic",
+  name: "BasicCreateProjectInviteV1Flow",
+  step: [
+    {
+      i: {
+        ref: "create_project_invite_v1_ref01"
+      }
+
+      m: {
+        project_id: "project01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicCreateProjectInviteV1Flow"
+}

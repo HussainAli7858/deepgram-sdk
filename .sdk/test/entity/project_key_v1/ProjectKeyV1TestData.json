@@ -1,0 +1,33 @@
+{
+  "existing": {
+    "project_key_v1": {
+      "PROJECT_KEY_V100": {
+        "key_id": "KEY01",
+        "project_id": "PROJECT01",
+        "id": "PROJECT_KEY_V100"
+      },
+      "PROJECT_KEY_V101": {
+        "key_id": "KEY01",
+        "project_id": "PROJECT01",
+        "id": "PROJECT_KEY_V101"
+      },
+      "PROJECT_KEY_V102": {
+        "key_id": "KEY01",
+        "project_id": "PROJECT01",
+        "id": "PROJECT_KEY_V102"
+      }
+    }
+  },
+  "new": {
+    "project_key_v1": {
+      "project_key_v1_ref01": {}
+    }
+  },
+  "requests": {
+    "DELETE /v1/projects/{project_id}/keys/{key_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

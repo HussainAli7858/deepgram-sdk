@@ -1,0 +1,44 @@
+{
+  "existing": {
+    "list_billing_fields_v1": {
+      "LIST_BILLING_FIELDS_V100": {
+        "accessors": [],
+        "deployments": [],
+        "line_items": {},
+        "tags": [],
+        "project_id": "PROJECT01"
+      },
+      "LIST_BILLING_FIELDS_V101": {
+        "accessors": [],
+        "deployments": [],
+        "line_items": {},
+        "tags": [],
+        "project_id": "PROJECT01"
+      },
+      "LIST_BILLING_FIELDS_V102": {
+        "accessors": [],
+        "deployments": [],
+        "line_items": {},
+        "tags": [],
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "list_billing_fields_v1": {
+      "list_billing_fields_v1_ref01": {
+        "accessors": [],
+        "deployments": [],
+        "line_items": {},
+        "tags": []
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{project_id}/billing/fields": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

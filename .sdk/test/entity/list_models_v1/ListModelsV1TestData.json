@@ -1,0 +1,36 @@
+{
+  "existing": {
+    "list_models_v1": {
+      "LIST_MODELS_V100": {
+        "stt": [],
+        "tts": [],
+        "project_id": "PROJECT01"
+      },
+      "LIST_MODELS_V101": {
+        "stt": [],
+        "tts": [],
+        "project_id": "PROJECT01"
+      },
+      "LIST_MODELS_V102": {
+        "stt": [],
+        "tts": [],
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "list_models_v1": {
+      "list_models_v1_ref01": {
+        "stt": [],
+        "tts": []
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{project_id}/models": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

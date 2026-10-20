@@ -1,0 +1,40 @@
+{
+  "existing": {
+    "grant": {
+      "GRANT00": {
+        "access_token": "s1e",
+        "expires_in": 31,
+        "ttl_seconds": 32,
+        "id": "GRANT00"
+      },
+      "GRANT01": {
+        "access_token": "s3c",
+        "expires_in": 61,
+        "ttl_seconds": 62,
+        "id": "GRANT01"
+      },
+      "GRANT02": {
+        "access_token": "s5a",
+        "expires_in": 91,
+        "ttl_seconds": 92,
+        "id": "GRANT02"
+      }
+    }
+  },
+  "new": {
+    "grant": {
+      "grant_ref01": {
+        "access_token": "s78",
+        "expires_in": 121,
+        "ttl_seconds": 122
+      }
+    }
+  },
+  "requests": {
+    "POST /v1/auth/grant": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

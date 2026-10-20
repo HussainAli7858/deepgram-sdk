@@ -1,0 +1,29 @@
+# BasicUpdateProjectV1Flow
+
+main: kit: flow: BasicUpdateProjectV1Flow:
+{
+  entity: "update_project_v1",
+  kind: "basic",
+  name: "BasicUpdateProjectV1Flow",
+  step: [
+    {
+      i: {
+        ref: "update_project_v1_ref01",
+        srcdatavar: "update_project_v1_ref01_data",
+        suffix: "_up0",
+        textfield: "message"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-update_project_v1_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicUpdateProjectV1Flow"
+}

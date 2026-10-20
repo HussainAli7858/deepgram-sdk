@@ -1,0 +1,9 @@
+# BasicProjectInviteV1Flow
+
+main: kit: flow: BasicProjectInviteV1Flow:
+{
+  entity: "project_invite_v1",
+  kind: "basic",
+  name: "BasicProjectInviteV1Flow",
+  "key$": "BasicProjectInviteV1Flow"
+}

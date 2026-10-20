@@ -1,0 +1,36 @@
+{
+  "existing": {
+    "list_project_keys_v1_response_api_keys_item": {
+      "LIST_PROJECT_KEYS_V1_RESPONSE_API_KEYS_ITEM00": {
+        "api_key": {},
+        "member": {},
+        "project_id": "PROJECT01"
+      },
+      "LIST_PROJECT_KEYS_V1_RESPONSE_API_KEYS_ITEM01": {
+        "api_key": {},
+        "member": {},
+        "project_id": "PROJECT01"
+      },
+      "LIST_PROJECT_KEYS_V1_RESPONSE_API_KEYS_ITEM02": {
+        "api_key": {},
+        "member": {},
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "list_project_keys_v1_response_api_keys_item": {
+      "list_project_keys_v1_response_api_keys_item_ref01": {
+        "api_key": {},
+        "member": {}
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{project_id}/keys": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

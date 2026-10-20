@@ -1,0 +1,22 @@
+# BasicCreateKeyV1Flow
+
+main: kit: flow: BasicCreateKeyV1Flow:
+{
+  entity: "create_key_v1",
+  kind: "basic",
+  name: "BasicCreateKeyV1Flow",
+  step: [
+    {
+      i: {
+        ref: "create_key_v1_ref01"
+      }
+
+      m: {
+        project_id: "project01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicCreateKeyV1Flow"
+}

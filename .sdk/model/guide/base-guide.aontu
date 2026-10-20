@@ -1,0 +1,276 @@
+# Generated from the API definition and overwritten on every build: do not
+# edit this file. Put customizations in the guide entry file, which includes
+# this one and overrides its defaults:
+#   guide.aontu
+
+guide: {
+  metrics: count: entity: 35
+  metrics: count: path: 36
+  metrics: count: method: 50
+
+  entity: agent: {
+    path: "/v1/projects/{project_id}/agents": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.agents`")|top
+    }
+    path: "/v1/projects/{project_id}/agents/{agent_id}": {
+      rename: param: "agent_id": *"id"
+      op: load: method: *GET
+      op: remove: method: *DELETE
+      op: update: method: *PUT
+    }
+  }
+
+  entity: agent_think_models_v1: {
+    path: "/v1/agent/settings/think/models": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.models`")|top
+    }
+  }
+
+  entity: agent_variable: {
+    path: "/v1/projects/{project_id}/agent-variables": {
+      op: create: method: *POST
+      op: list: method: *GET
+      op: list: transform: res: *("`body.variables`")|top
+    }
+    path: "/v1/projects/{project_id}/agent-variables/{variable_id}": {
+      rename: param: "variable_id": *"id"
+      op: load: method: *GET
+      op: patch: method: *PATCH
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: billing_breakdown_v1: {
+    path: "/v1/projects/{project_id}/billing/breakdown": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: create_agent_configuration_v1: {
+    path: "/v1/projects/{project_id}/agents": {
+      op: create: method: *POST
+    }
+  }
+
+  entity: create_key_v1: {
+    path: "/v1/projects/{project_id}/keys": {
+      op: create: method: *POST
+    }
+  }
+
+  entity: create_project_distribution_credentials_v1: {
+    path: "/v1/projects/{project_id}/self-hosted/distribution/credentials": {
+      op: create: method: *POST
+    }
+  }
+
+  entity: create_project_invite_v1: {
+    path: "/v1/projects/{project_id}/invites": {
+      op: create: method: *POST
+    }
+  }
+
+  entity: grant: {
+    path: "/v1/auth/grant": {
+      op: create: method: *POST
+    }
+  }
+
+  entity: list_billing_fields_v1: {
+    path: "/v1/projects/{project_id}/billing/fields": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: list_models_v1: {
+    path: "/v1/projects/{project_id}/models": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: list_project_balances_v1_response_balances_item: {
+    path: "/v1/projects/{project_id}/balances": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.balances`")|top
+    }
+  }
+
+  entity: list_project_distribution_credentials_v1_response_distribution: {
+    path: "/v1/projects/{project_id}/self-hosted/distribution/credentials": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.distribution_credentials`")|top
+    }
+  }
+
+  entity: list_project_invites_v1_response_invites_item: {
+    path: "/v1/projects/{project_id}/invites": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.invites`")|top
+    }
+  }
+
+  entity: list_project_keys_v1_response_api_keys_item: {
+    path: "/v1/projects/{project_id}/keys": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.api_keys`")|top
+    }
+  }
+
+  entity: list_project_member_scopes_v1: {
+    path: "/v1/projects/{project_id}/members/{member_id}/scopes": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.scopes`")|top
+    }
+  }
+
+  entity: list_project_members_v1_response_members_item: {
+    path: "/v1/projects/{project_id}/members": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.members`")|top
+    }
+  }
+
+  entity: list_project_purchases_v1_response_orders_item: {
+    path: "/v1/projects/{project_id}/purchases": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.orders`")|top
+    }
+  }
+
+  entity: listen: {
+    path: "/v1/listen": {
+      op: create: method: *POST
+    }
+  }
+
+  entity: model: {
+    path: "/v1/models": {
+      op: list: method: *GET
+    }
+    path: "/v1/models/{model_id}": {
+      rename: param: "model_id": *"id"
+      op: load: method: *GET
+    }
+    path: "/v1/projects/{project_id}/models/{model_id}": {
+      rename: param: "model_id": *"id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: project: {
+    path: "/v1/projects": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.projects`")|top
+    }
+    path: "/v1/projects/{project_id}": {
+      rename: param: "project_id": *"id"
+      op: load: method: *GET
+      op: remove: method: *DELETE
+    }
+    path: "/v1/projects/{project_id}/leave": {
+      action: "leave": {}
+      rename: param: "project_id": *"id"
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: project_balance_v1: {
+    path: "/v1/projects/{project_id}/balances/{balance_id}": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: project_distribution_credentials_v1: {
+    path: "/v1/projects/{project_id}/self-hosted/distribution/credentials/{distribution_credentials_id}": {
+      op: load: method: *GET
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: project_invite_v1: {
+    path: "/v1/projects/{project_id}/invites/{email}": {
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: project_key_v1: {
+    path: "/v1/projects/{project_id}/keys/{key_id}": {
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: project_key_v1_response_item: {
+    path: "/v1/projects/{project_id}/keys/{key_id}": {
+      op: load: method: *GET
+      op: load: transform: res: *("`body.item`")|top
+    }
+  }
+
+  entity: project_member_v1: {
+    path: "/v1/projects/{project_id}/members/{member_id}": {
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: project_request: {
+    path: "/v1/projects/{project_id}/requests": {
+      rename: param: "project_id": *"id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.requests`")|top
+    }
+    path: "/v1/projects/{project_id}/requests/{request_id}": {
+      rename: param: "request_id": *"id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.request`")|top
+    }
+  }
+
+  entity: read: {
+    path: "/v1/read": {
+      op: create: method: *POST
+    }
+  }
+
+  entity: speak: {
+    path: "/v1/speak": {
+      op: create: method: *POST
+    }
+    path: "/v2/speak": {
+      op: create: method: *POST
+    }
+  }
+
+  entity: update_project_member_scopes_v1: {
+    path: "/v1/projects/{project_id}/members/{member_id}/scopes": {
+      op: update: method: *PUT
+    }
+  }
+
+  entity: update_project_v1: {
+    path: "/v1/projects/{project_id}": {
+      op: patch: method: *PATCH
+    }
+  }
+
+  entity: usage: {
+    path: "/v1/projects/{project_id}/usage": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: usage_breakdown_v1: {
+    path: "/v1/projects/{project_id}/usage/breakdown": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: usage_fields_v1: {
+    path: "/v1/projects/{project_id}/usage/fields": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.models`")|top
+    }
+  }
+
+}

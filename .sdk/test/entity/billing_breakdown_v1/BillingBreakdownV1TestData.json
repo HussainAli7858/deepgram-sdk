@@ -1,0 +1,36 @@
+{
+  "existing": {
+    "billing_breakdown_v1": {
+      "BILLING_BREAKDOWN_V100": {
+        "dollars": "s14",
+        "grouping": {},
+        "project_id": "PROJECT01"
+      },
+      "BILLING_BREAKDOWN_V101": {
+        "dollars": "s28",
+        "grouping": {},
+        "project_id": "PROJECT01"
+      },
+      "BILLING_BREAKDOWN_V102": {
+        "dollars": "s3c",
+        "grouping": {},
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "billing_breakdown_v1": {
+      "billing_breakdown_v1_ref01": {
+        "dollars": "s50",
+        "grouping": {}
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{project_id}/billing/breakdown": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

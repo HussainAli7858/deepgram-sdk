@@ -1,0 +1,33 @@
+{
+  "existing": {
+    "project_member_v1": {
+      "PROJECT_MEMBER_V100": {
+        "member_id": "MEMBER01",
+        "project_id": "PROJECT01",
+        "id": "PROJECT_MEMBER_V100"
+      },
+      "PROJECT_MEMBER_V101": {
+        "member_id": "MEMBER01",
+        "project_id": "PROJECT01",
+        "id": "PROJECT_MEMBER_V101"
+      },
+      "PROJECT_MEMBER_V102": {
+        "member_id": "MEMBER01",
+        "project_id": "PROJECT01",
+        "id": "PROJECT_MEMBER_V102"
+      }
+    }
+  },
+  "new": {
+    "project_member_v1": {
+      "project_member_v1_ref01": {}
+    }
+  },
+  "requests": {
+    "DELETE /v1/projects/{project_id}/members/{member_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+# BasicProjectBalanceV1Flow
+
+main: kit: flow: BasicProjectBalanceV1Flow:
+{
+  entity: "project_balance_v1",
+  kind: "basic",
+  name: "BasicProjectBalanceV1Flow",
+  step: [
+    {
+      i: {
+        ref: "project_balance_v1_ref01",
+        srcdatavar: "project_balance_v1_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "project_balance_v101",
+        project_id: "project01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-project_balance_v1_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicProjectBalanceV1Flow"
+}

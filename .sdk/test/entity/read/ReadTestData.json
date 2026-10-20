@@ -1,0 +1,36 @@
+{
+  "existing": {
+    "read": {
+      "READ00": {
+        "metadata": {},
+        "results": {},
+        "id": "READ00"
+      },
+      "READ01": {
+        "metadata": {},
+        "results": {},
+        "id": "READ01"
+      },
+      "READ02": {
+        "metadata": {},
+        "results": {},
+        "id": "READ02"
+      }
+    }
+  },
+  "new": {
+    "read": {
+      "read_ref01": {
+        "metadata": {},
+        "results": {}
+      }
+    }
+  },
+  "requests": {
+    "POST /v1/read": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

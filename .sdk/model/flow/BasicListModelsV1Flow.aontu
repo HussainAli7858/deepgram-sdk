@@ -1,0 +1,26 @@
+# BasicListModelsV1Flow
+
+main: kit: flow: BasicListModelsV1Flow:
+{
+  entity: "list_models_v1",
+  kind: "basic",
+  name: "BasicListModelsV1Flow",
+  step: [
+    {
+      m: {
+        project_id: "project01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "list_models_v1_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicListModelsV1Flow"
+}

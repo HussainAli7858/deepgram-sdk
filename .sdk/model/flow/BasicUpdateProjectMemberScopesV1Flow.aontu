@@ -1,0 +1,33 @@
+# BasicUpdateProjectMemberScopesV1Flow
+
+main: kit: flow: BasicUpdateProjectMemberScopesV1Flow:
+{
+  entity: "update_project_member_scopes_v1",
+  kind: "basic",
+  name: "BasicUpdateProjectMemberScopesV1Flow",
+  step: [
+    {
+      d: {
+        project_id: "project01"
+      }
+
+      i: {
+        ref: "update_project_member_scopes_v1_ref01",
+        srcdatavar: "update_project_member_scopes_v1_ref01_data",
+        suffix: "_up0",
+        textfield: "message"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-update_project_member_scopes_v1_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicUpdateProjectMemberScopesV1Flow"
+}

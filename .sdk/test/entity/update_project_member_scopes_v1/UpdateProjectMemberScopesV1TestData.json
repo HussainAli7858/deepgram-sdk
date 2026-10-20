@@ -1,0 +1,42 @@
+{
+  "existing": {
+    "update_project_member_scopes_v1": {
+      "UPDATE_PROJECT_MEMBER_SCOPES_V100": {
+        "message": "s14",
+        "scope": "s15",
+        "member_id": "MEMBER01",
+        "project_id": "PROJECT01",
+        "id": "UPDATE_PROJECT_MEMBER_SCOPES_V100"
+      },
+      "UPDATE_PROJECT_MEMBER_SCOPES_V101": {
+        "message": "s28",
+        "scope": "s29",
+        "member_id": "MEMBER01",
+        "project_id": "PROJECT01",
+        "id": "UPDATE_PROJECT_MEMBER_SCOPES_V101"
+      },
+      "UPDATE_PROJECT_MEMBER_SCOPES_V102": {
+        "message": "s3c",
+        "scope": "s3d",
+        "member_id": "MEMBER01",
+        "project_id": "PROJECT01",
+        "id": "UPDATE_PROJECT_MEMBER_SCOPES_V102"
+      }
+    }
+  },
+  "new": {
+    "update_project_member_scopes_v1": {
+      "update_project_member_scopes_v1_ref01": {
+        "message": "s50",
+        "scope": "s51"
+      }
+    }
+  },
+  "requests": {
+    "PUT /v1/projects/{project_id}/members/{member_id}/scopes": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}
